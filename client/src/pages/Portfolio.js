@@ -23,40 +23,40 @@ let images = [
     url: "https://unearth.business/",
     path: Unearth,
     name: "Unearth",
-    textLine1: "Front End Application",
-    textLine2: "HTML, CSS, Bootstrap, Javascript, JQuery"
+    textLine1:
+      "A front end application designed to allow users to find hiking trails nearby with a zip code search."
   },
   {
     row: "row1",
     url: "https://glacial-beach-88138.herokuapp.com",
     path: ChicagoCrime,
     name: "Chicago-Crime-Data",
-    textLine1: "Full-Stack Application",
-    textLine2: "Handlebars, CSS, JQuery, Node.js, MySQL"
+    textLine1:
+      "A full-stack application designed to quantitavely display crime trends for the city of Chicago."
   },
   {
     row: "row1",
     url: "https://radiant-beyond-45567.herokuapp.com/",
     path: POS,
     name: "Restaurant-POS-System",
-    textLine1: "Full-Stack Application",
-    textLine2: "React, CSS, JQuery, Node.js, MongoDB"
+    textLine1:
+      "A full-stack application designed to be a restaurant POS system for the front of house staff."
   },
   {
     row: "row2",
     url: "https://andreamt15.github.io/psychic-game/",
     path: Psychic,
     name: "Word-Guess-Game",
-    textLine1: "Front End Application",
-    textLine2: "HTML, CSS, Vanilla Javascript"
+    textLine1:
+      "A front end application desinged to generate a random letter for the user to guess."
   },
   {
     row: "row2",
     url: "https://andreamt15.github.io/unit-4-game/",
     path: CrystalCollector,
     name: "Crystal-Collector",
-    textLine1: "Front End Application",
-    textLine2: "HTML, CSS, JQuery"
+    textLine1:
+      "A front end application designed as a guessing game in which the user is to try to guess the values of the crystals and try to reach the correct total score."
   },
   {
     row: "row2",
@@ -125,10 +125,7 @@ class PortfolioSection extends React.Component {
                     <a href={image.url}>
                       <Image src={image.path} alt={image.name} />
                       <div className="overlay">
-                        <div className="text">
-                          <h3>{image.textLine1}</h3>
-                          {image.textLine2}
-                        </div>
+                        <div className="text">{image.textLine1}</div>
                       </div>
                     </a>
                   </Col>
@@ -145,7 +142,7 @@ class PortfolioSection extends React.Component {
                       <Image src={image.path} alt={image.name} />
                       <div className="overlay">
                         <div className="text">
-                          <h3>{image.textLine1}</h3>
+                          {image.textLine1}
                           {image.textLine2}
                         </div>
                       </div>

@@ -24,13 +24,19 @@ class ContactForm extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  async handleSubmit(e) {
-    e.preventdefault();
+  handleSubmit = e => {
+    // e.preventdefault();
 
-    const { fname, lname, email, phone, message } = this.state;
+    const info = {
+      firstName: this.state.fname,
+      lastName: this.state.lname,
+      email: this.state.email,
+      phone: this.state.phone,
+      message: this.state.message
+    };
 
-    const form = await axios.post("/api/form");
-  }
+    axios.post("api/form", info);
+  };
 
   //Contact Form
   render() {
@@ -44,6 +50,7 @@ class ContactForm extends React.Component {
                   <Form.Control
                     placeholder="First Name"
                     type="text"
+                    name="fname"
                     onChange={this.handleChange}
                   />
                 </Col>
@@ -51,6 +58,7 @@ class ContactForm extends React.Component {
                   <Form.Control
                     placeholder="Last Name"
                     type="text"
+                    name="lname"
                     onChange={this.handleChange}
                   />
                 </Col>
@@ -61,6 +69,7 @@ class ContactForm extends React.Component {
                 <Col md={8}>
                   <Form.Control
                     type="email"
+                    name="email"
                     placeholder="Enter email"
                     onChange={this.handleChange}
                   />
@@ -72,6 +81,7 @@ class ContactForm extends React.Component {
                 <Col md={8}>
                   <Form.Control
                     type="number"
+                    name="phone"
                     placeholder="123456789"
                     onChange={this.handleChange}
                   />
@@ -85,6 +95,7 @@ class ContactForm extends React.Component {
                     as="textarea"
                     rows="3"
                     placeholder="Message"
+                    name="message"
                     onChange={e => this.setState({ message: e.target.value })}
                     value={this.state.message}
                   />
@@ -94,8 +105,7 @@ class ContactForm extends React.Component {
 
             <Button
               variant="primary"
-              type="submit"
-              onClick={e => this.handleFormSubmit(e)}
+              onClick={e => this.handleSubmit(e)}
               value="Submit"
             >
               Submit
