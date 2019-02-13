@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.10",
+    "react-router-dom": "^4.3.1"
+  },
+  "name": "react-portfolio2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/andreaMT15/react-portfolio2.git",
+  "author": "Andrea Minhas <andrea.minhas@gmail.com>",
+  "license": "MIT"
+}
