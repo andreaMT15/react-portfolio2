@@ -10,7 +10,7 @@
   },
   "name": "react-portfolio2",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/andreaMT15/react-portfolio2.git",
   "author": "Andrea Minhas <andrea.minhas@gmail.com>",
   "license": "MIT"
