@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Portfolio from "./pages/Portfolio";
 import ContactForm from "./pages/Contact";
-
+import Thanks from "./pages/ThankYou";
 import Home from "../src/pages/Home";
 import MainNav from "./components/MainNav";
+import "./App.css";
 
 const AppRouter = () => (
   <Router>
@@ -13,6 +14,7 @@ const AppRouter = () => (
       <Route path="/" exact component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/contact" component={ContactForm} />
+      <Route path="/thank-you" component={Thanks} />
     </div>
   </Router>
 );

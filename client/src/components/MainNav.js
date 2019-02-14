@@ -13,17 +13,27 @@ class MainNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Brand href="#home">Andrea Minhas</Navbar.Brand>
+        <Navbar
+          style={{ backgroundColor: "#FF746A" }}
+          collapseOnSelect
+          expand="lg"
+        >
+          <Navbar.Brand style={{ color: "white" }} href="#home" />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto" />
             <Nav>
-              <Nav.Link href="#deets">About Me</Nav.Link>
+              <Nav.Link style={{ color: "white" }} href="#">
+                About Me
+              </Nav.Link>
 
-              <Nav.Link href="/portfolio">Portfolio</Nav.Link>
+              <Nav.Link style={{ color: "white" }} href="/portfolio">
+                Portfolio
+              </Nav.Link>
 
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link style={{ color: "white" }} href="/contact">
+                Contact
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

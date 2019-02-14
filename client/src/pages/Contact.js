@@ -1,9 +1,15 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
+import { Container, Button, Col, Row, Form } from "react-bootstrap";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
+const style = {
+  text: {
+    fontSize: "1.2rem",
+    marginTop: "1.5rem",
+    lineHeight: "2rem"
+  }
+};
 
 //this is the contact form
 class ContactForm extends React.Component {
@@ -25,7 +31,8 @@ class ContactForm extends React.Component {
   };
 
   handleSubmit = e => {
-    // e.preventdefault();
+    e.preventDefault();
+    document.getElementById("contact").reset();
 
     const info = {
       firstName: this.state.fname,
@@ -43,7 +50,20 @@ class ContactForm extends React.Component {
     return (
       <div>
         <Container>
-          <Form onSubmit={this.handleSubmit} style={{ marginTop: "50px" }}>
+          <Row>
+            <Col md={10}>
+              <p style={style.text}>
+                Have a project you would like to discuss? <br />
+                Connect with me on{" "}
+                <a href="https://www.linkedin.com/in/andreaminhas/">
+                  LinkedIn
+                </a>{" "}
+                or fill out the form below with your contact information and
+                details about your project.
+              </p>
+            </Col>
+          </Row>
+          <Form id="contact" onSubmit={this.handleSubmit}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
@@ -96,20 +116,21 @@ class ContactForm extends React.Component {
                     rows="3"
                     placeholder="Message"
                     name="message"
-                    onChange={e => this.setState({ message: e.target.value })}
-                    value={this.state.message}
+                    onChange={this.handleChange}
                   />
                 </Col>
               </Form.Row>
             </Form.Group>
-
-            <Button
-              variant="primary"
-              onClick={e => this.handleSubmit(e)}
-              value="Submit"
-            >
-              Submit
-            </Button>
+            <Link to={`/thank-you`}>
+              <Button
+                style={{ backgroundColor: "#003366" }}
+                onClick={e => this.handleSubmit(e)}
+                value="Submit"
+                type="submit"
+              >
+                Submit
+              </Button>
+            </Link>
           </Form>
         </Container>
       </div>
