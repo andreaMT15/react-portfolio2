@@ -96,7 +96,9 @@ class ContactForm extends React.Component {
                     name="fname"
                     onChange={this.handleChange}
                   />
-                  <div>{this.state.fnameError}</div>
+                  <div style={{ marginLeft: "5px", marginTop: "2px" }}>
+                    {this.state.fnameError}
+                  </div>
                 </Col>
                 <Col md={4}>
                   <Form.Control
