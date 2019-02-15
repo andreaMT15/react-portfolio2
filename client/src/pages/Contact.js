@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Button, Col, Row, Form } from "react-bootstrap";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const style = {
   text: {
@@ -11,19 +11,22 @@ const style = {
   }
 };
 
+const initialState = {
+  fname: "",
+  lname: "",
+  email: "",
+  phone: "",
+  message: "",
+  fnameError: "",
+  lnameError: "",
+  emailError: ""
+};
+
 //this is the contact form
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      fname: "",
-      lname: "",
-      email: "",
-      phone: "",
-      message: "",
-      mailSent: false,
-      error: null
-    };
+    this.state = initialState;
   }
 
   handleChange = e => {
@@ -32,21 +35,41 @@ class ContactForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    document.getElementById("contact").reset();
 
-    const info = {
-      firstName: this.state.fname,
-      lastName: this.state.lname,
-      email: this.state.email,
-      phone: this.state.phone,
-      message: this.state.message
-    };
+    if (this.state.fname.length === 0) {
+      this.setState({
+        fnameError: "Please enter your first name."
+      });
+    } else if (this.state.lname.length === 0) {
+      this.setState({
+        lnameError: "Please enter your last name"
+      });
+    } else if (!this.state.email.includes("@")) {
+      this.setState({
+        emailError: "Please enter a valid email address"
+      });
+    } else {
+      const info = {
+        firstName: this.state.fname,
+        lastName: this.state.lname,
+        email: this.state.email,
+        phone: this.state.phone,
+        message: this.state.message
+      };
 
-    axios.post("api/form", info);
+      let self = this;
+      axios.post("api/form", info).then(function(data) {
+        console.log(data);
+        self.props.history.push("/thank-you");
+      });
+    }
   };
+  // }
 
   //Contact Form
   render() {
+    console.log("router stuff", this.props.history);
+
     return (
       <div>
         <Container>
@@ -73,6 +96,7 @@ class ContactForm extends React.Component {
                     name="fname"
                     onChange={this.handleChange}
                   />
+                  <div>{this.state.fnameError}</div>
                 </Col>
                 <Col md={4}>
                   <Form.Control
@@ -81,6 +105,7 @@ class ContactForm extends React.Component {
                     name="lname"
                     onChange={this.handleChange}
                   />
+                  <div>{this.state.lnameError} </div>
                 </Col>
               </Form.Row>
             </Form.Group>
@@ -93,6 +118,7 @@ class ContactForm extends React.Component {
                     placeholder="Enter email"
                     onChange={this.handleChange}
                   />
+                  <div>{this.state.emailError}</div>
                 </Col>
               </Form.Row>
             </Form.Group>
@@ -100,9 +126,9 @@ class ContactForm extends React.Component {
               <Form.Row>
                 <Col md={8}>
                   <Form.Control
-                    type="number"
+                    type="test"
                     name="phone"
-                    placeholder="123456789"
+                    placeholder="(708) 123-456"
                     onChange={this.handleChange}
                   />
                 </Col>
@@ -121,16 +147,15 @@ class ContactForm extends React.Component {
                 </Col>
               </Form.Row>
             </Form.Group>
-            <Link to={`/thank-you`}>
-              <Button
-                style={{ backgroundColor: "#003366" }}
-                onClick={e => this.handleSubmit(e)}
-                value="Submit"
-                type="submit"
-              >
-                Submit
-              </Button>
-            </Link>
+
+            <Button
+              style={{ backgroundColor: "#003366" }}
+              onClick={e => this.handleSubmit(e)}
+              value="Submit"
+              type="submit"
+            >
+              Submit
+            </Button>
           </Form>
         </Container>
       </div>
@@ -138,4 +163,4 @@ class ContactForm extends React.Component {
   }
 }
 
-export default ContactForm;
+export default withRouter(ContactForm);
