@@ -22,8 +22,12 @@ class MainNav extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto" />
+
             <Nav>
-              <Nav.Link style={{ color: "white" }} href="#">
+              <Nav.Link style={{ color: "white" }} href="/">
+                Home
+              </Nav.Link>
+              <Nav.Link style={{ color: "white" }} href="/about-me">
                 About Me
               </Nav.Link>
 

@@ -5,13 +5,15 @@ import ContactForm from "./pages/Contact";
 import Thanks from "./pages/ThankYou";
 import Home from "../src/pages/Home";
 import MainNav from "./components/MainNav";
-import "./App.css";
+import About from "./pages/About";
+import "./Portfolio.css";
 
 const AppRouter = () => (
   <Router>
     <div>
       <MainNav />
       <Route path="/" exact component={Home} />
+      <Route path="/about-me" component={About} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/contact" component={ContactForm} />
       <Route path="/thank-you" component={Thanks} />

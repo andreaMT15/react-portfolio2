@@ -14,7 +14,6 @@ import POS from "../Images/POS.png";
 import Image from "../components/Image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import "./Portfolio.css";
 import GithubImg from "../components/Github";
 
 let images = [
