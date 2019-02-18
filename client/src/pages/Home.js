@@ -86,7 +86,7 @@ class Home extends React.Component {
               </Col>
               <Col md={8}>
                 <h5 style={{ marginBottom: "15px" }}>
-                  Hi, I'm Andrea Minhas. I am a Full-Stack Web Developer with a
+                  Hi, I'm Andrea Minhas, a full-stack web developer with a
                   background in digital marketing. I enjoy helping brands build
                   an online presence by creating high-functioning, creative,
                   user centric, web-applications and leveraging my background in

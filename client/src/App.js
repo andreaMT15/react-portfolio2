@@ -13,9 +13,6 @@ const AppRouter = () => (
     <div>
       {/* <MainNav /> */}
       <Route path="/" exact component={Home} />
-      {/* <Route path="/about-me" component={About} /> */}
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/contact" component={ContactForm} />
       <Route path="/thank-you" component={Thanks} />
     </div>
   </Router>

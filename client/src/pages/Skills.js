@@ -1,12 +1,19 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Headshot from "../Images/headshot.jpg";
 
 const style = {
+  title: {
+    fontFamily: "Roboto",
+    fontWeight: "700",
+    textAlign: "center",
+    marginTop: "5rem",
+    color: "#1a73ba"
+  },
   list: {
     display: "inline-block",
     fontSize: "1.3rem",
-    textAlign: "center"
+    textAlign: "center",
+    color: "black"
   },
   listRow: {
     display: "flex",
@@ -22,7 +29,7 @@ class About extends React.Component {
         <Container>
           <Row>
             <Col sm={6} md={12} lg={12}>
-              <h1 style={{ textAlign: "center", marginTop: "5rem" }}>Skills</h1>
+              <h1 style={style.title}>Skills</h1>
             </Col>
           </Row>
           <br />

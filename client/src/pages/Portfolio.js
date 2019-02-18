@@ -19,8 +19,12 @@ import GithubImg from "../components/Github";
 const style = {
   title: {
     textAlign: "center",
-    marginTop: "3rem"
+    marginTop: "3rem",
+    color: "#1a73ba",
+    fontFamily: "Roboto",
+    fontWeight: "700"
   },
+
   row: {
     marginLeft: "52px",
     marginTop: "1rem"
