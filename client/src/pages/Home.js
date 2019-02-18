@@ -1,12 +1,11 @@
 import React from "react";
-import { Navbar, Nav, Row, Col, Jumbotron, Button } from "react-bootstrap";
+import { Row, Col, Jumbotron, Button } from "react-bootstrap";
 import Background from "../Images/sergey-zolkin-192937-unsplash.jpg";
-import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
+import ScrollableAnchor from "react-scrollable-anchor";
 import Portfolio from "./Portfolio";
 import Headshot from "../Images/headshot.jpg";
 import Skills from "./Skills";
 import Contact from "./Contact";
-import MainNav from "../components/MainNav";
 
 const style = {
   background: {
@@ -54,30 +53,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        {/* <Navbar
-          style={{ backgroundColor: "#FF746A" }}
-          collapseOnSelect
-          expand="lg"
-        >
-          <Navbar.Brand style={{ color: "white" }} href="#home" />
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto" />
-
-            <Nav>
-              <a style={{ color: "white" }} href="/">
-                Home
-              </a>
-
-              <a href="#skills">Portfolio</a>
-
-              <Nav.Link style={{ color: "white" }} href="/contact">
-                Contact
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar> */}
-        <MainNav />
         <div style={style.background}>
           <Jumbotron style={style.intro}>
             <Row>
