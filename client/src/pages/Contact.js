@@ -4,6 +4,10 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 
 const style = {
+  page: {
+    marginTop: "6rem",
+    marginBottom: "15rem"
+  },
   text: {
     fontSize: "1.2rem",
     marginTop: "1.5rem",
@@ -72,7 +76,7 @@ class ContactForm extends React.Component {
 
     return (
       <div>
-        <Container>
+        <Container style={style.page}>
           <Row>
             <Col md={10}>
               <p style={style.text}>

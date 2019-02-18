@@ -2,8 +2,8 @@ import React from "react";
 
 const style = {
   images: {
-    width: "300px",
-    height: "300px",
+    width: "250px",
+    height: "250px",
     marginRight: "5px",
     marginTop: "15px",
     marginBottom: "15px",

@@ -16,6 +16,17 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import GithubImg from "../components/Github";
 
+const style = {
+  title: {
+    textAlign: "center",
+    marginTop: "3rem"
+  },
+  row: {
+    marginLeft: "52px",
+    marginTop: "1rem"
+  }
+};
+
 let images = [
   {
     key: 1,
@@ -133,7 +144,8 @@ class PortfolioSection extends React.Component {
     return (
       <div>
         <Container>
-          <Row style={{ marginTop: "1.5rem" }}>
+          <h1 style={style.title}>Projects</h1>
+          <Row style={style.row}>
             {images
               .filter(image => image.row === "row1")
               .map(image => {
@@ -145,6 +157,7 @@ class PortfolioSection extends React.Component {
                     lg={4}
                     xl={4}
                     className="test"
+                    style={{ display: "inline-block" }}
                   >
                     <a href={image.url}>
                       <Image src={image.path} alt={image.name} />
@@ -161,7 +174,7 @@ class PortfolioSection extends React.Component {
                 );
               })}
           </Row>
-          <Row>
+          <Row style={style.row}>
             {images
               .filter(image => image.row === "row2")
               .map(image => {
@@ -193,7 +206,7 @@ class PortfolioSection extends React.Component {
                 );
               })}
           </Row>
-          <Row>
+          <Row style={style.row}>
             {images
               .filter(image => image.row === "row3")
               .map(image => {
@@ -225,7 +238,7 @@ class PortfolioSection extends React.Component {
                 );
               })}
           </Row>
-          <Row>
+          <Row style={style.row}>
             {images
               .filter(image => image.row === "row4")
               .map(image => {

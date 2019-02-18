@@ -14,6 +14,7 @@ class MainNav extends React.Component {
     return (
       <div>
         <Navbar
+          fixed="top"
           style={{ backgroundColor: "#FF746A" }}
           collapseOnSelect
           expand="lg"
@@ -27,15 +28,12 @@ class MainNav extends React.Component {
               <Nav.Link style={{ color: "white" }} href="/">
                 Home
               </Nav.Link>
-              <Nav.Link style={{ color: "white" }} href="/about-me">
-                About Me
-              </Nav.Link>
 
-              <Nav.Link style={{ color: "white" }} href="/portfolio">
+              <Nav.Link style={{ color: "white" }} href="#skills">
                 Portfolio
               </Nav.Link>
 
-              <Nav.Link style={{ color: "white" }} href="/contact">
+              <Nav.Link style={{ color: "white" }} href="#contact">
                 Contact
               </Nav.Link>
             </Nav>
