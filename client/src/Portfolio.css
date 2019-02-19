@@ -80,4 +80,14 @@ body {
   #skill-list {
     display: none;
   }
+
+  .test {
+    margin: 0;
+    padding: 0;
+  }
+
+  .overlay,
+  .text {
+    display: none;
+  }
 }
