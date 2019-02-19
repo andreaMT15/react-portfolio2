@@ -6,11 +6,12 @@ import Portfolio from "./Portfolio";
 import Headshot from "../Images/headshot.jpg";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import "../Portfolio.css";
 
 const style = {
   background: {
     width: "100%",
-    height: "900px",
+    minHeight: "900px",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundImage: `url(${Background})`,
@@ -23,9 +24,11 @@ const style = {
     textAlign: "center",
     position: "relative",
     top: "180px",
-    width: "53%",
-    height: "350px",
-    left: "25%",
+    left: "27%",
+    minWidth: "40%",
+    maxWidth: "50%",
+    minHeight: "300px",
+    maxHeight: "550px",
     color: "white",
     fontWeight: "700",
     fontFamily: "Raleway"
@@ -41,26 +44,23 @@ const style = {
   },
   headshot: {
     borderRadius: "80%",
-    display: "inline-block"
+    display: "inline-block",
+    marginBottom: "10px"
   }
 };
 
 class Home extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     return (
       <div>
         <div style={style.background}>
-          <Jumbotron style={style.intro}>
+          <Jumbotron id={"home"} style={style.intro}>
             <Row>
-              <Col md={4}>
+              <Col sm={1} md={4}>
                 <img src={Headshot} alt="headshot" style={style.headshot} />
               </Col>
-              <Col md={8}>
-                <h5 style={{ marginBottom: "15px" }}>
+              <Col sm={2} md={8}>
+                <h5 id={"intro-text"} style={{ marginBottom: "15px" }}>
                   Hi, I'm Andrea Minhas, a full-stack web developer with a
                   background in digital marketing. I enjoy helping brands build
                   an online presence by creating high-functioning, creative,

@@ -33,7 +33,7 @@ class About extends React.Component {
             </Col>
           </Row>
           <br />
-          <Row>
+          <Row id={"skill-list"}>
             <Col sm={6} md={12} lg={12} style={style.listRow}>
               <p style={style.list}>React.js</p>
               <p style={style.list}>HTML 5</p>
