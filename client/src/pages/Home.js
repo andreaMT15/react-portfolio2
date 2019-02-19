@@ -25,10 +25,8 @@ const style = {
     position: "relative",
     top: "180px",
     left: "27%",
-    minWidth: "40%",
-    maxWidth: "50%",
-    minHeight: "300px",
-    maxHeight: "550px",
+    maxWidth: "62%",
+    maxHeight: "560px",
     color: "white",
     fontWeight: "700",
     fontFamily: "Raleway"
