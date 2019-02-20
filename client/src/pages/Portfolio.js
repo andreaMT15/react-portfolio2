@@ -45,22 +45,22 @@ let images = [
   {
     key: 2,
     row: "row1",
-    url: "https://glacial-beach-88138.herokuapp.com",
-    path: ChicagoCrime,
-    name: "Chicago-Crime-Data",
-    textLine1:
-      "A full-stack application designed to quantitavely display crime trends for the city of Chicago.",
-    repoUrl: "https://github.com/andreaMT15/Project-2.1"
-  },
-  {
-    key: 3,
-    row: "row1",
     url: "https://radiant-beyond-45567.herokuapp.com/",
     path: POS,
     name: "Restaurant-POS-System",
     textLine1:
       "A full-stack application designed to be a restaurant POS system for the front of house staff.",
     repoUrl: "https://github.com/shayneofficer/POS-System"
+  },
+  {
+    key: 3,
+    row: "row1",
+    url: "https://blooming-refuge-11896.herokuapp.com/",
+    path: News,
+    name: "News-Scraper",
+    textLine1:
+      "A full-stack application designed to scrape the NYT Poltics politics page and store the articles in MongoDB.",
+    repoUrl: "https://github.com/andreaMT15/NYT-Scraper"
   },
   {
     key: 4,
@@ -130,16 +130,6 @@ let images = [
     textLine1:
       "A command line application that utlizes Node.js and MySQL to create an amazon like store in the terminal.",
     repoUrl: "https://github.com/andreaMT15/bamazon"
-  },
-  {
-    key: 11,
-    row: "row4",
-    url: "https://blooming-refuge-11896.herokuapp.com/",
-    path: News,
-    name: "News-Scraper",
-    textLine1:
-      "A full-stack application designed to scrape the NYT Poltics politics page and store the articles in MongoDB.",
-    repoUrl: "https://github.com/andreaMT15/NYT-Scraper"
   }
 ];
 

@@ -91,3 +91,23 @@ body {
     display: none;
   }
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #intro-text {
+    font-size: 15px;
+  }
+
+  #skill-list {
+    display: none;
+  }
+
+  .test {
+    margin: 0;
+    padding: 0;
+  }
+
+  .overlay,
+  .text {
+    display: none;
+  }
+}
