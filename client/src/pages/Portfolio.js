@@ -7,7 +7,6 @@ import TrainSchedule from "../Images/Train-Schedule.png";
 import LiriBot from "../Images/Liri-Bot.png";
 import Bamazon from "../Images/Bamazon.png";
 import Psychic from "../Images/Word-Guess-Game.png";
-import ChicagoCrime from "../Images/crime.png";
 import Unearth from "../Images/unearth.png";
 import News from "../Images/scraper.png";
 import POS from "../Images/POS.png";
@@ -38,8 +37,7 @@ let images = [
     url: "https://unearth.business/",
     path: Unearth,
     name: "Unearth",
-    textLine1:
-      "A front end application designed to allow users to find hiking trails nearby with a zip code search.",
+    textLine1: "A front end application designed to allow users to find hiking trails nearby with a zip code search.",
     repoUrl: "https://github.com/unearth-business/unearth-business.github.io"
   },
   {
@@ -48,8 +46,7 @@ let images = [
     url: "https://radiant-beyond-45567.herokuapp.com/",
     path: POS,
     name: "Restaurant-POS-System",
-    textLine1:
-      "A full-stack application designed to be a restaurant POS system for the front of house staff.",
+    textLine1: "A full-stack application designed to be a restaurant POS system for the front of house staff.",
     repoUrl: "https://github.com/shayneofficer/POS-System"
   },
   {
@@ -68,8 +65,7 @@ let images = [
     url: "https://andreamt15.github.io/psychic-game/",
     path: Psychic,
     name: "Word-Guess-Game",
-    textLine1:
-      "A front end application desinged to generate a random letter for the user to guess.",
+    textLine1: "A front end application desinged to generate a random letter for the user to guess.",
     repoUrl: "https://github.com/andreaMT15/psychic-game"
   },
   {
@@ -97,8 +93,7 @@ let images = [
     url: "https://andreamt15.github.io/GifTastic/",
     path: Movies,
     name: "Movie-GIF's",
-    textLine1:
-      "A front end application that utilizes the giphy API in order to display movie GIF's.",
+    textLine1: "A front end application that utilizes the giphy API in order to display movie GIF's.",
     repoUrl: "https://github.com/andreaMT15/GifTastic"
   },
   {
@@ -144,15 +139,7 @@ class PortfolioSection extends React.Component {
               .filter(image => image.row === "row1")
               .map(image => {
                 return (
-                  <Col
-                    key={image.key}
-                    sm={1}
-                    md={4}
-                    lg={4}
-                    xl={4}
-                    className="test"
-                    style={{ display: "inline-block" }}
-                  >
+                  <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="test" style={{ display: "inline-block" }}>
                     <a href={image.url}>
                       <Image src={image.path} alt={image.name} />
                       <div className="overlay">
@@ -173,20 +160,9 @@ class PortfolioSection extends React.Component {
               .filter(image => image.row === "row2")
               .map(image => {
                 return (
-                  <Col
-                    key={image.key}
-                    sm={1}
-                    md={4}
-                    lg={4}
-                    xl={4}
-                    className="test"
-                  >
+                  <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="test">
                     <a href={image.url}>
-                      <Image
-                        key={image.key}
-                        src={image.path}
-                        alt={image.name}
-                      />
+                      <Image key={image.key} src={image.path} alt={image.name} />
                       <div className="overlay">
                         <div className="text">{image.textLine1}</div>
                       </div>
@@ -205,20 +181,9 @@ class PortfolioSection extends React.Component {
               .filter(image => image.row === "row3")
               .map(image => {
                 return (
-                  <Col
-                    key={image.key}
-                    sm={1}
-                    md={4}
-                    lg={4}
-                    xl={4}
-                    className="test"
-                  >
+                  <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="test">
                     <a href={image.url}>
-                      <Image
-                        key={image.key}
-                        src={image.path}
-                        alt={image.name}
-                      />
+                      <Image key={image.key} src={image.path} alt={image.name} />
                       <div className="overlay">
                         <div className="text">{image.textLine1}</div>
                       </div>
@@ -237,20 +202,9 @@ class PortfolioSection extends React.Component {
               .filter(image => image.row === "row4")
               .map(image => {
                 return (
-                  <Col
-                    key={image.key}
-                    sm={1}
-                    md={4}
-                    lg={4}
-                    xl={4}
-                    className="test"
-                  >
+                  <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="test">
                     <a href={image.url}>
-                      <Image
-                        key={image.key}
-                        src={image.path}
-                        alt={image.name}
-                      />
+                      <Image key={image.key} src={image.path} alt={image.name} />
                       <div className="overlay">
                         <div className="text">{image.textLine1}</div>
                       </div>
