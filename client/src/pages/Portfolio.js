@@ -62,30 +62,30 @@ let images = [
   {
     key: 4,
     row: "row2",
-    url: "https://andreamt15.github.io/psychic-game/",
+    url: "https://andreamt15.github.io/Psychic-Game/",
     path: Psychic,
     name: "Word-Guess-Game",
     textLine1: "A front end application desinged to generate a random letter for the user to guess.",
-    repoUrl: "https://github.com/andreaMT15/psychic-game"
+    repoUrl: "https://github.com/andreaMT15/Psychic-Game"
   },
   {
     key: 5,
     row: "row2",
-    url: "https://andreamt15.github.io/unit-4-game/",
+    url: "https://andreamt15.github.io/Crystal-Collector-Game/",
     path: CrystalCollector,
     name: "Crystal-Collector",
     textLine1:
       "A front end application designed to have the user attempt to guess the total score by guesssing the values of the crystals.",
-    repoUrl: "https://github.com/andreaMT15/unit-4-game"
+    repoUrl: "https://github.com/andreaMT15/Crystal-Collector-Game"
   },
   {
     key: 6,
     row: "row2",
-    url: "https://andreamt15.github.io/TriviaGame/",
+    url: "https://andreamt15.github.io/Chicago-Trivia-Game/",
     path: ChicagoTrivia,
     name: "Chicago-Trivia-Quiz",
     textLine1: "A front end application designed as a timed trivia quiz.",
-    repoUrl: "https://github.com/andreaMT15/TriviaGame"
+    repoUrl: "https://github.com/andreaMT15/Chicago-Trivia-Game"
   },
   {
     key: 7,
