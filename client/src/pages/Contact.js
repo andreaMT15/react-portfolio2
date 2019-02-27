@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 
 const style = {
   page: {
-    marginTop: "6rem",
+    marginTop: "10rem",
     marginBottom: "15rem"
   },
   text: {
@@ -80,13 +80,9 @@ class ContactForm extends React.Component {
           <Row>
             <Col md={10}>
               <p style={style.text}>
-                Have a project you would like to discuss? <br />
-                Connect with me on{" "}
-                <a href="https://www.linkedin.com/in/andreaminhas/">
-                  LinkedIn
-                </a>{" "}
-                or fill out the form below with your contact information and
-                details about your project.
+                <h4>Interested in working together?</h4>
+                Connect with me on <a href="https://www.linkedin.com/in/andreaminhas/">LinkedIn</a> or fill out the form
+                below with your contact information to get in touch.
               </p>
             </Col>
           </Row>
@@ -94,23 +90,11 @@ class ContactForm extends React.Component {
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
-                  <Form.Control
-                    placeholder="First Name"
-                    type="text"
-                    name="fname"
-                    onChange={this.handleChange}
-                  />
-                  <div style={{ marginLeft: "5px", marginTop: "2px" }}>
-                    {this.state.fnameError}
-                  </div>
+                  <Form.Control placeholder="First Name" type="text" name="fname" onChange={this.handleChange} />
+                  <div style={{ marginLeft: "5px", marginTop: "2px" }}>{this.state.fnameError}</div>
                 </Col>
                 <Col md={4}>
-                  <Form.Control
-                    placeholder="Last Name"
-                    type="text"
-                    name="lname"
-                    onChange={this.handleChange}
-                  />
+                  <Form.Control placeholder="Last Name" type="text" name="lname" onChange={this.handleChange} />
                   <div>{this.state.lnameError} </div>
                 </Col>
               </Form.Row>
@@ -118,12 +102,7 @@ class ContactForm extends React.Component {
             <Form.Group>
               <Form.Row>
                 <Col md={8}>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    placeholder="Enter email"
-                    onChange={this.handleChange}
-                  />
+                  <Form.Control type="email" name="email" placeholder="Enter email" onChange={this.handleChange} />
                   <div>{this.state.emailError}</div>
                 </Col>
               </Form.Row>
@@ -131,12 +110,7 @@ class ContactForm extends React.Component {
             <Form.Group>
               <Form.Row>
                 <Col md={8}>
-                  <Form.Control
-                    type="test"
-                    name="phone"
-                    placeholder="(708) 123-456"
-                    onChange={this.handleChange}
-                  />
+                  <Form.Control type="test" name="phone" placeholder="(708) 123-456" onChange={this.handleChange} />
                 </Col>
               </Form.Row>
             </Form.Group>

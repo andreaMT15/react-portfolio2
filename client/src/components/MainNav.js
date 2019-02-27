@@ -13,12 +13,7 @@ class MainNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar
-          fixed="top"
-          style={{ backgroundColor: "#FF746A" }}
-          collapseOnSelect
-          expand="lg"
-        >
+        <Navbar fixed="top" style={{ backgroundColor: "#8778d2" }} collapseOnSelect expand="lg">
           <Navbar.Brand style={{ color: "white" }} href="#home" />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

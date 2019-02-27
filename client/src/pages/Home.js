@@ -3,7 +3,7 @@ import { Row, Col, Jumbotron, Button } from "react-bootstrap";
 import Background from "../Images/sergey-zolkin-192937-unsplash.jpg";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Portfolio from "./Portfolio";
-import Headshot from "../Images/headshot.jpg";
+import Headshot from "../Images/Andrea_2017v2.jpg";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import "../Portfolio.css";
@@ -19,7 +19,7 @@ const style = {
     opacity: ".9"
   },
   intro: {
-    backgroundColor: "#FF746A",
+    backgroundColor: "#FFFFFF",
     opacity: ".95",
     textAlign: "center",
     position: "relative",
@@ -58,13 +58,11 @@ class Home extends React.Component {
                 <img src={Headshot} alt="headshot" style={style.headshot} />
               </Col>
               <Col sm={2} md={8}>
-                <h5 id={"intro-text"} style={{ marginBottom: "15px" }}>
-                  Hi, I'm Andrea Minhas, a full-stack web developer with a
-                  background in digital marketing. I enjoy helping brands build
-                  an online presence by creating high-functioning, creative,
-                  user centric, web-applications and leveraging my background in
-                  digital marketing to provide a unique perspective on how the
-                  end-user interacts with a website.{" "}
+                <h5 id={"intro-text"} style={{ marginBottom: "15px", color: "black" }}>
+                  Hi, I'm Andrea Minhas, a full-stack web developer with a background in digital marketing. I enjoy
+                  helping brands build an online presence by creating high-functioning, creative, user centric,
+                  web-applications and leveraging my background in digital marketing to provide a unique perspective on
+                  how the end-user interacts with a website.{" "}
                 </h5>
                 <a href="#skills">
                   <Button style={style.introBtn}> See My Work </Button>
