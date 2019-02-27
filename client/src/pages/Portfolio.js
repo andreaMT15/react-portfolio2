@@ -26,9 +26,6 @@ const style = {
   row: {
     marginLeft: "52px",
     marginTop: "1rem"
-  },
-  container: {
-    marginBottom: "3rem"
   }
 };
 
@@ -134,7 +131,7 @@ class PortfolioSection extends React.Component {
   render() {
     return (
       <div>
-        <Container style={style.container}>
+        <Container>
           <h1 style={style.title}>Projects</h1>
           <Row style={style.row}>
             {images
@@ -211,7 +208,7 @@ class PortfolioSection extends React.Component {
                         <div className="text">{image.textLine1}</div>
                       </div>
                     </a>
-                    <div style={{ marginBottom: "1.5rem" }}>
+                    <div style={{ marginBottom: "10rem" }}>
                       <a href={image.repoUrl}>
                         <GithubImg />
                       </a>

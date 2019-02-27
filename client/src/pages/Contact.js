@@ -5,13 +5,11 @@ import { withRouter } from "react-router-dom";
 
 const style = {
   page: {
-    marginTop: "11rem",
-    marginBottom: "11rem"
+    marginTop: "8rem"
   },
   text: {
-    fontSize: "1.2rem",
-    marginTop: "1.5rem",
-    lineHeight: "2rem"
+    fontSize: "1.2rem"
+    // marginTop: "2rem"
   }
 };
 
@@ -72,13 +70,11 @@ class ContactForm extends React.Component {
 
   //Contact Form
   render() {
-    console.log("router stuff", this.props.history);
-
     return (
       <div>
-        <Container style={style.page}>
+        <Container>
           <Row>
-            <Col md={10}>
+            <Col md={10} style={style.page}>
               <p style={style.text}>
                 <h4>Interested in working together?</h4>
                 Connect with me on <a href="https://www.linkedin.com/in/andreaminhas/">LinkedIn</a> or fill out the form
@@ -86,7 +82,7 @@ class ContactForm extends React.Component {
               </p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit}>
+          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "12rem" }}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
