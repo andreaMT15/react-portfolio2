@@ -23,10 +23,12 @@ const style = {
     fontFamily: "Roboto",
     fontWeight: "700"
   },
-
   row: {
     marginLeft: "52px",
     marginTop: "1rem"
+  },
+  container: {
+    marginBottom: "3rem"
   }
 };
 
@@ -132,7 +134,7 @@ class PortfolioSection extends React.Component {
   render() {
     return (
       <div>
-        <Container>
+        <Container style={style.container}>
           <h1 style={style.title}>Projects</h1>
           <Row style={style.row}>
             {images
