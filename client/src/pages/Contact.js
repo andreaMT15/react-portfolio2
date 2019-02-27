@@ -5,8 +5,8 @@ import { withRouter } from "react-router-dom";
 
 const style = {
   page: {
-    marginTop: "10rem",
-    marginBottom: "15rem"
+    marginTop: "11rem",
+    marginBottom: "11rem"
   },
   text: {
     fontSize: "1.2rem",
