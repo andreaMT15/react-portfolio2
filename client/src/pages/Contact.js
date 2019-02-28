@@ -5,11 +5,23 @@ import { withRouter } from "react-router-dom";
 
 const style = {
   page: {
-    marginTop: "8rem"
+    marginTop: "10rem"
   },
   text: {
     fontSize: "1.2rem"
-    // marginTop: "2rem"
+  },
+  linkedin: {
+    color: "#0077B5",
+    marginRight: "1rem",
+    marginBottom: "5px"
+  },
+  github: {
+    color: "#000000",
+    marginRight: "1rem",
+    marginBottom: "5px"
+  },
+  email: {
+    color: "#003366"
   }
 };
 
@@ -76,13 +88,30 @@ class ContactForm extends React.Component {
           <Row>
             <Col md={10} style={style.page}>
               <p style={style.text}>
-                <h4>Interested in working together?</h4>
-                Connect with me on <a href="https://www.linkedin.com/in/andreaminhas/">LinkedIn</a> or fill out the form
-                below with your contact information to get in touch.
+                <h2 style={{ marginBottom: "15px" }}>Let's Connect</h2>
+                <a href="https://www.linkedin.com/in/andreaminhas/">
+                  <i style={style.linkedin} className="fab fa-linkedin" />
+                </a>
+                <a href="https://github.com/andreaMT15">
+                  <i style={style.github} className="fab fa-github" />
+                </a>
+                <br />
+                <a href="mailto:andrea.minhas@gmail.com" style={style.email}>
+                  andrea.minhas@gmail.com
+                </a>
               </p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "12rem" }}>
+          <br />
+          <Row>
+            <Col md={10}>
+              <p style={{ fontSize: "1.3rem" }}>
+                <h3>Interested in working a project together?</h3>
+              </p>
+              <p style={style.text}>Please fill out the contact form below.</p>
+            </Col>
+          </Row>
+          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "4rem" }}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>

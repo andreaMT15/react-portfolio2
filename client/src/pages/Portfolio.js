@@ -6,7 +6,6 @@ import Movies from "../Images/movie gifs.png";
 import TrainSchedule from "../Images/Train-Schedule.png";
 import LiriBot from "../Images/Liri-Bot.png";
 import Bamazon from "../Images/Bamazon.png";
-import Psychic from "../Images/Word-Guess-Game.png";
 import Unearth from "../Images/unearth.png";
 import News from "../Images/scraper.png";
 import POS from "../Images/POS.png";
@@ -61,15 +60,6 @@ let images = [
   {
     key: 4,
     row: "row2",
-    url: "https://andreamt15.github.io/Psychic-Game/",
-    path: Psychic,
-    name: "Word-Guess-Game",
-    textLine1: "A front end application desinged to generate a random letter for the user to guess.",
-    repoUrl: "https://github.com/andreaMT15/Psychic-Game"
-  },
-  {
-    key: 5,
-    row: "row2",
     url: "https://andreamt15.github.io/Crystal-Collector-Game/",
     path: CrystalCollector,
     name: "Crystal-Collector",
@@ -78,7 +68,7 @@ let images = [
     repoUrl: "https://github.com/andreaMT15/Crystal-Collector-Game"
   },
   {
-    key: 6,
+    key: 5,
     row: "row2",
     url: "https://andreamt15.github.io/Chicago-Trivia-Game/",
     path: ChicagoTrivia,
@@ -87,8 +77,8 @@ let images = [
     repoUrl: "https://github.com/andreaMT15/Chicago-Trivia-Game"
   },
   {
-    key: 7,
-    row: "row3",
+    key: 6,
+    row: "row2",
     url: "https://andreamt15.github.io/GifTastic/",
     path: Movies,
     name: "Movie-GIF's",
@@ -96,7 +86,7 @@ let images = [
     repoUrl: "https://github.com/andreaMT15/GifTastic"
   },
   {
-    key: 8,
+    key: 7,
     row: "row3",
     url: "https://andreamt15.github.io/Train-Schedule/",
     path: TrainSchedule,
@@ -106,7 +96,7 @@ let images = [
     repoUrl: "https://github.com/andreaMT15/Train-Schedule"
   },
   {
-    key: 9,
+    key: 8,
     row: "row3",
     url: "https://github.com/andreaMT15/LIRI-Node-App",
     path: LiriBot,
@@ -116,8 +106,8 @@ let images = [
     repoUrl: "https://github.com/andreaMT15/LIRI-Node-App"
   },
   {
-    key: 10,
-    row: "row4",
+    key: 9,
+    row: "row3",
     url: "https://github.com/andreaMT15/bamazon",
     path: Bamazon,
     name: "Bamazon",

@@ -59,10 +59,13 @@ class Home extends React.Component {
               </Col>
               <Col sm={2} md={8}>
                 <h5 id={"intro-text"} style={{ marginBottom: "15px", color: "black" }}>
-                  Hi, I'm Andrea Minhas, a full-stack web developer with a background in digital marketing. I enjoy
-                  helping brands build an online presence by creating high-functioning, creative, user centric,
-                  web-applications and leveraging my background in digital marketing to provide a unique perspective on
-                  how the end-user interacts with a website.{" "}
+                  Hi, I'm Andrea Minhas, a Northwestern University certified full-stack web developer with a background
+                  in social media marketing. I focus on creating high-functioning, user-centric web-applications in
+                  HTML, React.js, CSS, Javascript, and Node.js. My past experience in social media marketing allows me
+                  to leverage my strategic planning, team collaboration, and creativity skills. In my previous
+                  positions, I learned to adapt to new tools and technology quickly and work in a fast-paced
+                  environment. I value the benefits of both team based and independent work and enjoy working on both
+                  front-end and back-end development.
                 </h5>
                 <a href="#skills">
                   <Button style={style.introBtn}> See My Work </Button>
