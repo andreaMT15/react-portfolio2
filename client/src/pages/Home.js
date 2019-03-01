@@ -50,7 +50,7 @@ const style = {
 class Home extends React.Component {
   render() {
     configureAnchors({ offset: "60px", scrollDuration: 200 });
-    goToTop();
+    goToTop(Contact);
     return (
       <div>
         <div style={style.background}>
