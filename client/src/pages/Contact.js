@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 
 const style = {
   page: {
-    marginTop: "20rem"
+    // marginTop: "20rem"
   },
   text: {
     fontSize: "1.2rem"
@@ -111,7 +111,7 @@ class ContactForm extends React.Component {
               <p style={style.text}>Please fill out the contact form below.</p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "2rem" }}>
+          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "6rem" }}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
