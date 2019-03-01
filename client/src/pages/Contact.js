@@ -111,7 +111,7 @@ class ContactForm extends React.Component {
               <p style={style.text}>Please fill out the contact form below.</p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "6rem" }}>
+          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "2rem" }}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
