@@ -1,13 +1,11 @@
 import React from "react";
 import { Row, Col, Jumbotron, Button } from "react-bootstrap";
 import Background from "../Images/sergey-zolkin-192937-unsplash.jpg";
-import ScrollableAnchor from "react-scrollable-anchor";
-import { configureAnchors } from "react-scrollable-anchor";
-import { goToTop } from "react-scrollable-anchor";
 import Portfolio from "./Portfolio";
 import Headshot from "../Images/Andrea_2017v2.jpg";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import ScrollableAnchor from "react-scrollable-anchor";
 import "../Portfolio.css";
 
 const style = {
@@ -49,8 +47,6 @@ const style = {
 
 class Home extends React.Component {
   render() {
-    configureAnchors({ offset: -80, scrollDuration: 200 });
-
     return (
       <div>
         <div style={style.background}>

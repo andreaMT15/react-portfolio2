@@ -1,7 +1,13 @@
+import "babel-polyfill";
+import "react-app-polyfill/ie9";
+import "react-app-polyfill/ie11";
+import { polyfill } from "es6-promise";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+polyfill();
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

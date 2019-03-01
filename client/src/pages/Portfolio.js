@@ -177,7 +177,7 @@ class PortfolioSection extends React.Component {
                         <div className="text">{image.textLine1}</div>
                       </div>
                     </a>
-                    <div style={{ marginBottom: "10rem" }}>
+                    <div style={{ marginBottom: "15rem" }}>
                       <a href={image.repoUrl}>
                         <GithubImg />
                       </a>
