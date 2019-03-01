@@ -3,6 +3,7 @@ import { Row, Col, Jumbotron, Button } from "react-bootstrap";
 import Background from "../Images/sergey-zolkin-192937-unsplash.jpg";
 import ScrollableAnchor from "react-scrollable-anchor";
 import { configureAnchors } from "react-scrollable-anchor";
+import { goToTop } from "react-scrollable-anchor";
 import Portfolio from "./Portfolio";
 import Headshot from "../Images/Andrea_2017v2.jpg";
 import Skills from "./Skills";
@@ -48,7 +49,8 @@ const style = {
 
 class Home extends React.Component {
   render() {
-    configureAnchors({ offset: -60, scrollDuration: 200 });
+    configureAnchors({ offset: "60px", scrollDuration: 200 });
+    goToTop();
     return (
       <div>
         <div style={style.background}>
