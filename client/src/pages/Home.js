@@ -24,9 +24,8 @@ const style = {
     textAlign: "center",
     position: "relative",
     top: "180px",
-    left: "27%",
-    maxWidth: "62%",
-    maxHeight: "580px",
+    left: "20%",
+    maxWidth: "65%",
     color: "white",
     fontWeight: "700",
     fontFamily: "Raleway"
@@ -35,7 +34,6 @@ const style = {
     backgroundColor: "black",
     color: "white",
     borderColor: "black",
-    height: "2.5rem",
     borderRadius: "10px",
     fontWeight: "bold",
     fontSize: "1.2rem"
