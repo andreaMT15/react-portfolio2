@@ -26,7 +26,7 @@ const style = {
     top: "180px",
     left: "27%",
     maxWidth: "62%",
-    maxHeight: "560px",
+    maxHeight: "580px",
     color: "white",
     fontWeight: "700",
     fontFamily: "Raleway"
@@ -54,10 +54,10 @@ class Home extends React.Component {
         <div style={style.background}>
           <Jumbotron id={"home"} style={style.intro}>
             <Row>
-              <Col sm={1} md={4}>
-                <img src={Headshot} alt="headshot" style={style.headshot} />
+              <Col sm={1} md={4} lg={4}>
+                <img id="headshot-img" src={Headshot} alt="headshot" style={style.headshot} />
               </Col>
-              <Col sm={2} md={8}>
+              <Col sm={1} md={8} lg={8}>
                 <h5 id={"intro-text"} style={{ marginBottom: "15px", color: "black" }}>
                   Hi, I'm Andrea Minhas, a Northwestern University certified full-stack web developer with a background
                   in social media marketing. I focus on creating high-functioning, user-centric web-applications in
@@ -68,7 +68,7 @@ class Home extends React.Component {
                   front-end and back-end development.
                 </h5>
                 <a href="#skills">
-                  <Button style={style.introBtn}> See My Work </Button>
+                  <Button style={style.introBtn}>See My Work</Button>
                 </a>
               </Col>
             </Row>
