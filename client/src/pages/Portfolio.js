@@ -177,27 +177,6 @@ class PortfolioSection extends React.Component {
                         <div className="text">{image.textLine1}</div>
                       </div>
                     </a>
-                    <div>
-                      <a href={image.repoUrl}>
-                        <GithubImg />
-                      </a>
-                    </div>
-                  </Col>
-                );
-              })}
-          </Row>
-          <Row style={style.row}>
-            {images
-              .filter(image => image.row === "row4")
-              .map(image => {
-                return (
-                  <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="test">
-                    <a href={image.url}>
-                      <Image key={image.key} src={image.path} alt={image.name} />
-                      <div className="overlay">
-                        <div className="text">{image.textLine1}</div>
-                      </div>
-                    </a>
                     <div style={{ marginBottom: "10rem" }}>
                       <a href={image.repoUrl}>
                         <GithubImg />
