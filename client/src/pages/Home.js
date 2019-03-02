@@ -6,6 +6,7 @@ import Headshot from "../Images/Andrea_2017v2.jpg";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import ScrollableAnchor from "react-scrollable-anchor";
+import { configureAnchors } from "react-scrollable-anchor";
 import "../Portfolio.css";
 
 const style = {
@@ -44,6 +45,8 @@ const style = {
     marginBottom: "10px"
   }
 };
+
+configureAnchors({ offset: -60, scrollDuration: 200 });
 
 class Home extends React.Component {
   render() {
