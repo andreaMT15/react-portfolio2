@@ -2,10 +2,11 @@ import React from "react";
 import { Container, Button, Col, Row, Form } from "react-bootstrap";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
+import "../Portfolio.css";
 
 const style = {
   page: {
-    marginTop: "15rem"
+    marginTop: "25rem"
   },
   text: {
     fontSize: "1.2rem"
@@ -13,12 +14,14 @@ const style = {
   linkedin: {
     color: "#0077B5",
     marginRight: "1rem",
-    marginBottom: "5px"
+    marginBottom: "5px",
+    fontSize: "2.5rem"
   },
   github: {
     color: "#000000",
     marginRight: "1rem",
-    marginBottom: "5px"
+    marginBottom: "5px",
+    fontSize: "2.5rem"
   },
   email: {
     color: "#003366"
@@ -85,10 +88,10 @@ class ContactForm extends React.Component {
     return (
       <div>
         <Container style={style.page}>
-          <Row style={{ marginBottom: "1rem" }}>
+          <Row style={{ marginBottom: "1.5rem" }}>
             <Col sm={1} md={10}>
               <div style={style.text}>
-                <h2 style={{ marginBottom: "15px" }}>Let's Connect</h2>
+                <h2 style={{ marginTop: "10rem", marginBottom: "15px" }}>Let's Connect</h2>
                 <a href="https://www.linkedin.com/in/andreaminhas/">
                   <i style={style.linkedin} className="fab fa-linkedin" />
                 </a>
@@ -104,13 +107,13 @@ class ContactForm extends React.Component {
           </Row>
           <Row>
             <Col md={10}>
-              <div style={{ fontSize: "1.3rem" }}>
+              <div>
                 <h3>Interested in working a project together?</h3>
               </div>
               <p style={style.text}>Please fill out the contact form below.</p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "6rem" }}>
+          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "1.5rem" }}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>

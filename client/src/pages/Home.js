@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Row, Col, Jumbotron, Button } from "react-bootstrap";
 import Background from "../Images/sergey-zolkin-192937-unsplash.jpg";
 import Portfolio from "./Portfolio";
 import Headshot from "../Images/Andrea_2017v2.jpg";
-// import Skills from "./Skills";
-import Contact from "./Contact";
+import ContactForm from "./Contact";
 import ScrollableAnchor from "react-scrollable-anchor";
 import "../Portfolio.css";
+import MainNav from "../components/MainNav";
 
 const style = {
   background: {
@@ -50,6 +49,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <MainNav />
         <div style={style.background}>
           <Jumbotron id={"home"} style={style.intro}>
             <Row>
@@ -66,16 +66,25 @@ class Home extends React.Component {
                   environment. I value the benefits of both team based and independent work and enjoy working on both
                   front-end and back-end development.
                 </h5>
-                <Link to="/portfolio">
+                <a href="#portfolio">
                   <Button style={style.introBtn}>See My Work</Button>
-                </Link>
+                </a>
               </Col>
             </Row>
           </Jumbotron>
+        </div>
+        <div>
+          <ScrollableAnchor id={"portfolio"}>
+            <Portfolio />
+          </ScrollableAnchor>
+        </div>
+        <div>
+          <ScrollableAnchor id={"contact"}>
+            <ContactForm />
+          </ScrollableAnchor>
         </div>
       </div>
     );
   }
 }
-
 export default Home;
