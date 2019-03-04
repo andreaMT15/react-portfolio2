@@ -5,10 +5,10 @@ import { withRouter } from "react-router-dom";
 
 const style = {
   page: {
-    marginTop: "5rem"
+    marginTop: "15rem"
   },
-  introtext: {
-    fontSize: "1.1rem"
+  text: {
+    fontSize: "1.2rem"
   },
   linkedin: {
     color: "#0077B5",
@@ -21,7 +21,6 @@ const style = {
     marginBottom: "5px"
   },
   email: {
-    fontSize: "1.2rem",
     color: "#003366"
   }
 };
@@ -90,7 +89,6 @@ class ContactForm extends React.Component {
             <Col sm={1} md={10}>
               <div style={style.text}>
                 <h2 style={{ marginBottom: "15px" }}>Let's Connect</h2>
-
                 <a href="https://www.linkedin.com/in/andreaminhas/">
                   <i style={style.linkedin} className="fab fa-linkedin" />
                 </a>
@@ -109,10 +107,10 @@ class ContactForm extends React.Component {
               <div style={{ fontSize: "1.3rem" }}>
                 <h3>Interested in working a project together?</h3>
               </div>
-              <p style={{ fontSize: "1.2rem" }}>Please fill out the contact form below.</p>
+              <p style={style.text}>Please fill out the contact form below.</p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "1rem" }}>
+          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "6rem" }}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
