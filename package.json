@@ -20,6 +20,9 @@
   },
   "name": "react-portfolio2",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.0.0"
+  },
   "main": "server.js",
   "repository": "https://github.com/andreaMT15/react-portfolio2.git",
   "author": "Andrea Minhas <andrea.minhas@gmail.com>",
