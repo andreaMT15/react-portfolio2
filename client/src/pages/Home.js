@@ -2,16 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Jumbotron, Button } from "react-bootstrap";
 import Background from "../Images/sergey-zolkin-192937-unsplash.jpg";
-// import Portfolio from "./Portfolio";
+import Portfolio from "./Portfolio";
 import Headshot from "../Images/Andrea_2017v2.jpg";
-<<<<<<< HEAD
 // import Skills from "./Skills";
-// import Contact from "./Contact";
-=======
-import Skills from "./Skills";
 import Contact from "./Contact";
 import ScrollableAnchor from "react-scrollable-anchor";
->>>>>>> parent of e6d4903... pushing contact form down on page
 import "../Portfolio.css";
 
 const style = {

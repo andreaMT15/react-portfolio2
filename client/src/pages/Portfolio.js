@@ -179,12 +179,7 @@ class PortfolioSection extends React.Component {
                         <div className="text">{image.textLine1}</div>
                       </div>
                     </a>
-<<<<<<< HEAD
-                    <div style={{ marginBottom: "2rem" }}>
-                      {/* <div> */}
-=======
                     <div style={{ marginBottom: "15rem" }}>
->>>>>>> parent of e6d4903... pushing contact form down on page
                       <a href={image.repoUrl}>
                         <GithubImg />
                       </a>
