@@ -5,8 +5,7 @@ import { withRouter } from "react-router-dom";
 
 const style = {
   page: {
-    position: "fixed",
-    top: "40%"
+    marginTop: "5rem"
   },
   introtext: {
     fontSize: "1.1rem"
@@ -86,12 +85,12 @@ class ContactForm extends React.Component {
   render() {
     return (
       <div>
-        <Container>
-          <Row>
+        <Container style={style.page}>
+          <Row style={{ marginBottom: "1rem" }}>
             <Col sm={1} md={10}>
               <div style={style.text}>
-                {/* <h2 style={{ marginTop: "50rem", marginBottom: "15px" }}>Let's Connect</h2> */}
-                <h2>Let's Connect</h2>
+                <h2 style={{ marginBottom: "15px" }}>Let's Connect</h2>
+
                 <a href="https://www.linkedin.com/in/andreaminhas/">
                   <i style={style.linkedin} className="fab fa-linkedin" />
                 </a>

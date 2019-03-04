@@ -13,6 +13,7 @@ import Image from "../components/Image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import GithubImg from "../components/Github";
+import Skills from "./Skills";
 
 const style = {
   title: {
@@ -121,6 +122,7 @@ class PortfolioSection extends React.Component {
   render() {
     return (
       <div>
+        <Skills />
         <Container>
           <h1 style={style.title}>Projects</h1>
           <Row style={style.row}>
@@ -177,7 +179,7 @@ class PortfolioSection extends React.Component {
                         <div className="text">{image.textLine1}</div>
                       </div>
                     </a>
-                    <div style={{ marginBottom: "50rem" }}>
+                    <div style={{ marginBottom: "2rem" }}>
                       {/* <div> */}
                       <a href={image.repoUrl}>
                         <GithubImg />

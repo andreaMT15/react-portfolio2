@@ -24,11 +24,11 @@ class MainNav extends React.Component {
                 Home
               </Nav.Link>
 
-              <Nav.Link style={{ color: "white" }} href="#skills">
+              <Nav.Link style={{ color: "white" }} href="/portfolio">
                 Portfolio
               </Nav.Link>
 
-              <Nav.Link style={{ color: "white" }} href="#contact">
+              <Nav.Link style={{ color: "white" }} href="/contact">
                 Contact
               </Nav.Link>
             </Nav>
