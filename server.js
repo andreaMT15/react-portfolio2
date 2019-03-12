@@ -11,10 +11,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
+//
+// // Get production environment string from a config file
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+// use const with Object.freeze
 let transport = {
   host: "smtp.gmail.com",
   auth: {
@@ -23,10 +26,12 @@ let transport = {
   }
 };
 
+// use const
 let transporter = nodemailer.createTransport(transport);
 
 transporter.verify((error, success) => {
   if (error) {
+    // Use Error class for displaying errors
     console.log(error);
   } else {
     console.log("Server is ready to take messages");
@@ -34,6 +39,7 @@ transporter.verify((error, success) => {
 });
 
 app.post("/api/form", (req, res) => {
+  // Use destrcuturing to simplify variables
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const email = req.body.email;
@@ -41,6 +47,8 @@ app.post("/api/form", (req, res) => {
   const message = req.body.message;
   const content = `name: ${firstName} ${lastName} \n Phone Number: ${phone} \n Email: ${email} \n Message: ${message} `;
 
+  // Save strings in an object
+  // Use single quotes in js 
   const mail = {
     from: "Portfolio Contact Form",
     to: process.env.TO_EMAIL,

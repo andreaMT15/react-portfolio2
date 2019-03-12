@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 
-//this is the navbar
 class MainNav extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +10,11 @@ class MainNav extends React.Component {
 
   render() {
     return (
+      // The Navbar is already a wrapper, so this div is unnecessary.
       <div>
+        {/*
+          Don't use inline styles.
+        */}
         <Navbar fixed="top" style={{ backgroundColor: "#8778d2" }} collapseOnSelect expand="lg">
           <Navbar.Brand style={{ color: "white" }} href="#home" />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

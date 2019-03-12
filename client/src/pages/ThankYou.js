@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 
+// This component does not require state, nor does it use
+// the lifecycle hooks. Do not use a class here, make it a
+// dumb component.
+//
+// Don't use inline styles
 class Thanks extends React.Component {
   render(props) {
     return (
