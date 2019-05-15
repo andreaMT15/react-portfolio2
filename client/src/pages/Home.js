@@ -58,8 +58,8 @@ class Home extends React.Component {
               </Col>
               <Col sm={1} md={8} lg={8}>
                 <h5 id={"intro-text"} style={{ marginBottom: "15px", color: "black" }}>
-                  Hi, I'm Andrea Minhas, a front-end web developer with a background in social media marketing. I focus
-                  on creating high-functioning, user-centric web-applications in HTML, React.js, CSS, Javascript, and
+                  Hi, I'm Andrea Minhas, a full-stack developer with a background in social media marketing. I focus on
+                  creating high-functioning, user-centric web-applications in HTML, React.js, CSS, Javascript, and
                   Node.js. My past experience in social media marketing allows me to leverage my strategic planning,
                   team collaboration, and creativity skills. In my previous positions, I learned to adapt to new tools
                   and technology quickly and work in a fast-paced environment.
