@@ -1,45 +1,45 @@
-import React from "react";
-import { Container, Button, Col, Row, Form } from "react-bootstrap";
-import axios from "axios";
-import { withRouter } from "react-router-dom";
-import "../Portfolio.css";
+import React from 'react';
+import { Container, Button, Col, Row, Form } from 'react-bootstrap';
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
+import '../Portfolio.css';
 
 const style = {
   page: {
-    marginTop: "25rem"
+    // marginTop: '25rem'
+    marginTop: '1rem'
   },
   text: {
-    fontSize: "1.2rem"
+    fontSize: '1.2rem'
   },
   linkedin: {
-    color: "#0077B5",
-    marginRight: "1rem",
-    marginBottom: "5px",
-    fontSize: "2.5rem"
+    color: '#0077B5',
+    marginRight: '1rem',
+    marginBottom: '5px',
+    fontSize: '2.5rem'
   },
   github: {
-    color: "#000000",
-    marginRight: "1rem",
-    marginBottom: "5px",
-    fontSize: "2.5rem"
+    color: '#000000',
+    marginRight: '1rem',
+    marginBottom: '5px',
+    fontSize: '2.5rem'
   },
   email: {
-    color: "#003366"
+    color: '#003366'
   }
 };
 
 const initialState = {
-  fname: "",
-  lname: "",
-  email: "",
-  phone: "",
-  message: "",
-  fnameError: "",
-  lnameError: "",
-  emailError: ""
+  fname: '',
+  lname: '',
+  email: '',
+  phone: '',
+  message: '',
+  fnameError: '',
+  lnameError: '',
+  emailError: ''
 };
 
-//this is the contact form
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
@@ -55,15 +55,15 @@ class ContactForm extends React.Component {
 
     if (this.state.fname.length === 0) {
       this.setState({
-        fnameError: "Please enter your first name."
+        fnameError: 'Please enter your first name.'
       });
     } else if (this.state.lname.length === 0) {
       this.setState({
-        lnameError: "Please enter your last name"
+        lnameError: 'Please enter your last name'
       });
-    } else if (!this.state.email.includes("@")) {
+    } else if (!this.state.email.includes('@')) {
       this.setState({
-        emailError: "Please enter a valid email address"
+        emailError: 'Please enter a valid email address'
       });
     } else {
       const info = {
@@ -75,23 +75,21 @@ class ContactForm extends React.Component {
       };
 
       let self = this;
-      axios.post("api/form", info).then(function(data) {
+      axios.post('api/form', info).then(function(data) {
         console.log(data);
-        self.props.history.push("/thank-you");
+        self.props.history.push('/thank-you');
       });
     }
   };
-  // }
 
-  //Contact Form
   render() {
     return (
       <div>
         <Container style={style.page}>
-          <Row style={{ marginBottom: "1.5rem" }}>
+          <Row style={{ marginBottom: '1.5rem' }}>
             <Col sm={1} md={10}>
               <div style={style.text}>
-                <h2 style={{ marginTop: "10rem", marginBottom: "15px" }}>Let's Connect</h2>
+                <h2 style={{ marginTop: '10rem', marginBottom: '15px' }}>Let's Connect</h2>
                 <a href="https://www.linkedin.com/in/andreaminhas/">
                   <i style={style.linkedin} className="fab fa-linkedin" />
                 </a>
@@ -113,12 +111,12 @@ class ContactForm extends React.Component {
               <p style={style.text}>Please fill out the contact form below.</p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "1.5rem" }}>
+          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: '1.5rem' }}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
                   <Form.Control placeholder="First Name" type="text" name="fname" onChange={this.handleChange} />
-                  <div style={{ marginLeft: "5px", marginTop: "2px" }}>{this.state.fnameError}</div>
+                  <div style={{ marginLeft: '5px', marginTop: '2px' }}>{this.state.fnameError}</div>
                 </Col>
                 <Col md={4}>
                   <Form.Control placeholder="Last Name" type="text" name="lname" onChange={this.handleChange} />
@@ -156,7 +154,7 @@ class ContactForm extends React.Component {
             </Form.Group>
 
             <Button
-              style={{ backgroundColor: "#003366" }}
+              style={{ backgroundColor: '#003366' }}
               onClick={e => this.handleSubmit(e)}
               value="Submit"
               type="submit"
