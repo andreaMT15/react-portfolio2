@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+// Don't use inline styles
 const style = {
   title: {
     fontFamily: "Roboto",
@@ -22,6 +23,11 @@ const style = {
   }
 };
 
+// This component does not require state, nor does it use
+// the lifecycle hooks. Do not use a class here, make it a
+// dumb component.
+//
+// Don't use inline styles
 class About extends React.Component {
   render() {
     return (

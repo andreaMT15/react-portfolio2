@@ -4,6 +4,7 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 import "../Portfolio.css";
 
+// Inline styles are not recommended
 const style = {
   page: {
     marginTop: "25rem"
@@ -28,6 +29,10 @@ const style = {
   }
 };
 
+// When using const like this, uppercase underscore the var: INITIAL_STATE
+// Use single quotes in javascript, double quotes for html/JSX
+//
+// The naming convention is inconsistent. Use full words with camelcase.
 const initialState = {
   fname: "",
   lname: "",
@@ -53,6 +58,7 @@ class ContactForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
 
+    // Save error strings in an ERROR object
     if (this.state.fname.length === 0) {
       this.setState({
         fnameError: "Please enter your first name."
@@ -74,7 +80,9 @@ class ContactForm extends React.Component {
         message: this.state.message
       };
 
+      // replace let self with arrow function
       let self = this;
+      // avoid chaning then, use ES6 async/await
       axios.post("api/form", info).then(function(data) {
         console.log(data);
         self.props.history.push("/thank-you");
@@ -86,6 +94,8 @@ class ContactForm extends React.Component {
   //Contact Form
   render() {
     return (
+      // Container is a containing element, the div is unnecessary
+      // Save hrefs in an object for key reference
       <div>
         <Container style={style.page}>
           <Row style={{ marginBottom: "1.5rem" }}>
@@ -113,6 +123,10 @@ class ContactForm extends React.Component {
               <p style={style.text}>Please fill out the contact form below.</p>
             </Col>
           </Row>
+          {/*
+            Be consistent with formatting JSX and spacing
+            Consider using a linter
+          */}
           <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: "1.5rem" }}>
             <Form.Group>
               <Form.Row>
@@ -154,6 +168,10 @@ class ContactForm extends React.Component {
                 </Col>
               </Form.Row>
             </Form.Group>
+            {/*
+              HTML buttons by default submit forms.
+              Value/type are not valid attributes.
+            */}
 
             <Button
               style={{ backgroundColor: "#003366" }}
