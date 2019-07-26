@@ -4,6 +4,7 @@ import Home from '../src/pages/Home';
 import Portfolio from '../src/pages/Portfolio';
 import Contact from '../src/pages/Contact';
 import Thanks from './pages/ThankYou';
+import MainNav from '../src/components/MainNav';
 
 import './Portfolio.css';
 
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <MainNav />
           <Route path="/" exact component={Home} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/contact" component={Contact} />

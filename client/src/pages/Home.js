@@ -1,47 +1,43 @@
-import React from "react";
-import { Row, Col, Jumbotron, Button } from "react-bootstrap";
-import Background from "../Images/sergey-zolkin-192937-unsplash.jpg";
-import Portfolio from "./Portfolio";
-import Headshot from "../Images/Andrea_2017v2.jpg";
-import ContactForm from "./Contact";
-import ScrollableAnchor from "react-scrollable-anchor";
-import "../Portfolio.css";
-import MainNav from "../components/MainNav";
+import React from 'react';
+import { Row, Col, Jumbotron, Button } from 'react-bootstrap';
+import Background from '../Images/sergey-zolkin-192937-unsplash.jpg';
+import Headshot from '../Images/Andrea_2017v2.jpg';
+import '../Portfolio.css';
 
 const style = {
   background: {
-    width: "100%",
-    minHeight: "900px",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
+    width: '100%',
+    minHeight: '900px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
     backgroundImage: `url(${Background})`,
-    backgroundPosition: "center",
-    opacity: ".9"
+    backgroundPosition: 'center',
+    opacity: '.9'
   },
   intro: {
-    backgroundColor: "#FFFFFF",
-    opacity: ".95",
-    textAlign: "center",
-    position: "relative",
-    top: "180px",
-    left: "20%",
-    maxWidth: "65%",
-    color: "white",
-    fontWeight: "700",
-    fontFamily: "Raleway"
+    backgroundColor: '#FFFFFF',
+    opacity: '.95',
+    textAlign: 'center',
+    position: 'relative',
+    top: '180px',
+    left: '20%',
+    maxWidth: '65%',
+    color: 'white',
+    fontWeight: '700',
+    fontFamily: 'Raleway'
   },
   introBtn: {
-    backgroundColor: "black",
-    color: "white",
-    borderColor: "black",
-    borderRadius: "10px",
-    fontWeight: "bold",
-    fontSize: "1.2rem"
+    backgroundColor: 'black',
+    color: 'white',
+    borderColor: 'black',
+    borderRadius: '10px',
+    fontWeight: 'bold',
+    fontSize: '1.2rem'
   },
   headshot: {
-    borderRadius: "80%",
-    display: "inline-block",
-    marginBottom: "10px"
+    borderRadius: '80%',
+    display: 'inline-block',
+    marginBottom: '10px'
   }
 };
 
@@ -49,15 +45,14 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <MainNav />
         <div style={style.background}>
-          <Jumbotron id={"home"} style={style.intro}>
+          <Jumbotron id={'home'} style={style.intro}>
             <Row>
               <Col sm={1} md={4} lg={4}>
                 <img id="headshot-img" src={Headshot} alt="headshot" style={style.headshot} />
               </Col>
               <Col sm={1} md={8} lg={8}>
-                <h5 id={"intro-text"} style={{ marginBottom: "15px", color: "black" }}>
+                <h5 id={'intro-text'} style={{ marginBottom: '15px', color: 'black' }}>
                   Hi, I'm Andrea Minhas, a full-stack developer with a background in social media marketing. I focus on
                   creating high-functioning, user-centric web-applications in HTML, React.js, CSS, Javascript, and
                   Node.js. My past experience in social media marketing allows me to leverage my strategic planning,
@@ -70,16 +65,6 @@ class Home extends React.Component {
               </Col>
             </Row>
           </Jumbotron>
-        </div>
-        <div>
-          <ScrollableAnchor id={"portfolio"}>
-            <Portfolio />
-          </ScrollableAnchor>
-        </div>
-        <div>
-          <ScrollableAnchor id={"contact"}>
-            <ContactForm />
-          </ScrollableAnchor>
         </div>
       </div>
     );
