@@ -1,0 +1,54 @@
+#title {
+  font-family: Roboto;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 5rem;
+  color: #1a73ba;
+}
+
+ul {
+  list-style: none;
+}
+
+.skill-list,
+.skill-icons {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.skill-list {
+  font-size: 1.2rem;
+}
+
+.fab,
+.fas {
+  font-size: 3rem;
+  margin-right: 50px;
+}
+
+.fa-react {
+  color: #61dbfb;
+  margin-left: 25px;
+}
+
+.fa-html5 {
+  color: #e34c26;
+}
+
+.fa-css3-alt {
+  color: #1a73ba;
+}
+
+.fa-js-square {
+  color: #f0db4f;
+}
+
+.fa-node {
+  color: #3c873a;
+  margin-right: 25px;
+}
+
+.fa-database {
+  color: #696969;
+}

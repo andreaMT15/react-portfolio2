@@ -1,0 +1,47 @@
+#title {
+  text-align: center;
+  margin-top: 5rem;
+  color: #1a73ba;
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+.projects {
+  margin-left: 52px;
+  margin-top: 1rem;
+}
+
+.overlay {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #095db2;
+  border-radius: 20%;
+}
+
+.test:hover .overlay {
+  opacity: 0.95;
+}
+
+.text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
