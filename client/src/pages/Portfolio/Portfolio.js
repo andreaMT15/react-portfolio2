@@ -17,6 +17,7 @@ import Row from 'react-bootstrap/Row';
 import GithubImg from '../../components/Github';
 import Skills from '../../components/Skills/Skills';
 import './Portfolio.css';
+import '../../../src/App.css';
 
 let images = [
   {
@@ -125,7 +126,7 @@ const PortfolioSection = () => {
             .filter(image => image.row === 'row1')
             .map((image, index) => {
               return (
-                <Col key={index} sm={1} md={4} lg={4} xl={4} className="test" style={{ display: 'inline-block' }}>
+                <Col key={index} sm={1} md={4} lg={4} xl={4} className="project-col">
                   <a href={image.url}>
                     <Image src={image.path} alt={image.name} />
                     <div className="overlay">
@@ -146,7 +147,7 @@ const PortfolioSection = () => {
             .filter(image => image.row === 'row2')
             .map(image => {
               return (
-                <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="test">
+                <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="project-col">
                   <a href={image.url}>
                     <Image key={image.key} src={image.path} alt={image.name} />
                     <div className="overlay">
@@ -167,7 +168,7 @@ const PortfolioSection = () => {
             .filter(image => image.row === 'row3')
             .map(image => {
               return (
-                <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="test">
+                <Col key={image.key} sm={1} md={4} lg={4} xl={4} className="project-col">
                   <a href={image.url}>
                     <Image key={image.key} src={image.path} alt={image.name} />
                     <div className="overlay">
@@ -188,14 +189,14 @@ const PortfolioSection = () => {
             .filter(image => image.row === 'row4')
             .map((image, index) => {
               return (
-                <Col key={index} sm={1} md={4} lg={4} xl={4} className="test" style={{ display: 'inline-block' }}>
+                <Col key={index} sm={1} md={4} lg={4} xl={4} className="proejct-col">
                   <a href={image.url}>
                     <Image src={image.path} alt={image.name} />
                     <div className="overlay">
                       <div className="text">{image.textLine1}</div>
                     </div>
                   </a>
-                  <div style={{ marginBottom: '15rem' }}>
+                  <div>
                     <a href={image.repoUrl}>
                       <GithubImg />
                     </a>
