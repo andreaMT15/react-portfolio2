@@ -1,35 +1,22 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
-import CrystalCollector from '../Images/crystal-collector.png';
-import ChicagoTrivia from '../Images/The Chicago Trivia Quiz.png';
-import Movies from '../Images/movie gifs.png';
-import TrainSchedule from '../Images/Train-Schedule.png';
-import LiriBot from '../Images/Liri-Bot.png';
-import Bamazon from '../Images/Bamazon.png';
-import Unearth from '../Images/unearth.png';
-import News from '../Images/scraper.png';
-import POS from '../Images/POS.png';
-import Books from '../Images/Books.png';
-import Driver from '../Images/Driver.png';
-import Image from '../components/Image';
+import CrystalCollector from '../../Images/crystal-collector.png';
+import ChicagoTrivia from '../../Images/The Chicago Trivia Quiz.png';
+import Movies from '../../Images/movie gifs.png';
+import TrainSchedule from '../../Images/Train-Schedule.png';
+import LiriBot from '../../Images/Liri-Bot.png';
+import Bamazon from '../../Images/Bamazon.png';
+import Unearth from '../../Images/unearth.png';
+import News from '../../Images/scraper.png';
+import POS from '../../Images/POS.png';
+import Books from '../../Images/Books.png';
+import Driver from '../../Images/Driver.png';
+import Image from '../../components/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import GithubImg from '../components/Github';
-import Skills from './Skills';
-
-const style = {
-  title: {
-    textAlign: 'center',
-    marginTop: '3rem',
-    color: '#1a73ba',
-    fontFamily: 'Roboto',
-    fontWeight: '700'
-  },
-  row: {
-    marginLeft: '52px',
-    marginTop: '1rem'
-  }
-};
+import GithubImg from '../../components/Github';
+import Skills from '../../components/Skills/Skills';
+import './Portfolio.css';
 
 let images = [
   {
@@ -132,8 +119,8 @@ const PortfolioSection = () => {
     <div>
       <Skills />
       <Container>
-        <h1 style={style.title}>Projects</h1>
-        <Row style={style.row}>
+        <h1 id="title">Projects</h1>
+        <Row className="projects">
           {images
             .filter(image => image.row === 'row1')
             .map((image, index) => {
@@ -154,7 +141,7 @@ const PortfolioSection = () => {
               );
             })}
         </Row>
-        <Row style={style.row}>
+        <Row className="projects">
           {images
             .filter(image => image.row === 'row2')
             .map(image => {
@@ -175,7 +162,7 @@ const PortfolioSection = () => {
               );
             })}
         </Row>
-        <Row style={style.row}>
+        <Row className="projects">
           {images
             .filter(image => image.row === 'row3')
             .map(image => {
@@ -196,7 +183,7 @@ const PortfolioSection = () => {
               );
             })}
         </Row>
-        <Row style={style.row}>
+        <Row className="projects">
           {images
             .filter(image => image.row === 'row4')
             .map((image, index) => {

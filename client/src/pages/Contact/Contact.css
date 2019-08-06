@@ -1,0 +1,35 @@
+.contact-page {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.fab {
+  margin-right: 1rem;
+  margin-bottom: 5px;
+  font-size: 2.5rem;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-github {
+  color: #000000;
+}
+
+#email {
+  color: #003366;
+}
+
+#heading {
+  margin-top: 3rem;
+  margin-bottom: 15px;
+}
+
+#top-section {
+  margin-bottom: 1.5rem;
+}
+
+#submit-btn {
+  background-color: #003366;
+}

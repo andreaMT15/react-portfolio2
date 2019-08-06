@@ -2,32 +2,7 @@ import React from 'react';
 import { Container, Button, Col, Row, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import '../Portfolio.css';
-
-const style = {
-  page: {
-    // marginTop: '25rem'
-    marginTop: '1rem'
-  },
-  text: {
-    fontSize: '1.2rem'
-  },
-  linkedin: {
-    color: '#0077B5',
-    marginRight: '1rem',
-    marginBottom: '5px',
-    fontSize: '2.5rem'
-  },
-  github: {
-    color: '#000000',
-    marginRight: '1rem',
-    marginBottom: '5px',
-    fontSize: '2.5rem'
-  },
-  email: {
-    color: '#003366'
-  }
-};
+import './Contact.css';
 
 const initialState = {
   fname: '',
@@ -75,8 +50,7 @@ class ContactForm extends React.Component {
       };
 
       let self = this;
-      axios.post('api/form', info).then(function(data) {
-        console.log(data);
+      axios.post('api/form', info).then(function() {
         self.props.history.push('/thank-you');
       });
     }
@@ -85,19 +59,19 @@ class ContactForm extends React.Component {
   render() {
     return (
       <div>
-        <Container style={style.page}>
-          <Row style={{ marginBottom: '1.5rem' }}>
+        <Container className="contact-page">
+          <Row id="top-section">
             <Col sm={1} md={10}>
-              <div style={style.text}>
-                <h2 style={{ marginTop: '10rem', marginBottom: '15px' }}>Let's Connect</h2>
+              <div>
+                <h2 id="heading">Let's Connect</h2>
                 <a href="https://www.linkedin.com/in/andreaminhas/">
-                  <i style={style.linkedin} className="fab fa-linkedin" />
+                  <i className="fab fa-linkedin" />
                 </a>
                 <a href="https://github.com/andreaMT15">
-                  <i style={style.github} className="fab fa-github" />
+                  <i className="fab fa-github" />
                 </a>
                 <br />
-                <a href="mailto:andrea.minhas@gmail.com" style={style.email}>
+                <a href="mailto:andrea.minhas@gmail.com" id="email">
                   andrea.minhas@gmail.com
                 </a>
               </div>
@@ -108,15 +82,15 @@ class ContactForm extends React.Component {
               <div>
                 <h3>Interested in working a project together?</h3>
               </div>
-              <p style={style.text}>Please fill out the contact form below.</p>
+              <p>Please fill out the contact form below.</p>
             </Col>
           </Row>
-          <Form id="contact" onSubmit={this.handleSubmit} style={{ marginBottom: '1.5rem' }}>
+          <Form id="contact-form" onSubmit={this.handleSubmit}>
             <Form.Group>
               <Form.Row>
                 <Col md={4}>
                   <Form.Control placeholder="First Name" type="text" name="fname" onChange={this.handleChange} />
-                  <div style={{ marginLeft: '5px', marginTop: '2px' }}>{this.state.fnameError}</div>
+                  <div>{this.state.fnameError}</div>
                 </Col>
                 <Col md={4}>
                   <Form.Control placeholder="Last Name" type="text" name="lname" onChange={this.handleChange} />
@@ -153,12 +127,7 @@ class ContactForm extends React.Component {
               </Form.Row>
             </Form.Group>
 
-            <Button
-              style={{ backgroundColor: '#003366' }}
-              onClick={e => this.handleSubmit(e)}
-              value="Submit"
-              type="submit"
-            >
+            <Button onClick={e => this.handleSubmit(e)} value="Submit" type="submit" id="submit-btn">
               Submit
             </Button>
           </Form>

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from '../src/pages/Home';
-import Portfolio from '../src/pages/Portfolio';
-import Contact from '../src/pages/Contact';
+import Home from './pages/Home/Home';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Contact from './pages/Contact/Contact';
 import Thanks from './pages/ThankYou';
-import MainNav from '../src/components/MainNav';
-
-import './Portfolio.css';
+import MainNav from './components/MainNav/MainNav';
+import './App.css';
 
 class App extends Component {
   render() {
