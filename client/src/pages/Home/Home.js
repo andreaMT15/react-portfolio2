@@ -7,9 +7,9 @@ import './Home.css';
 const Home = () => {
   return (
     <div id="home-background">
-      <Jumbotron className="jumbotron" id={'home'}>
+      <Jumbotron className="jumbotron" id="home">
         <Row>
-          <Col sm={1} md={4} lg={4}>
+          <Col sm={1} md={4} lg={4} className="headshot-container">
             <img id="headshot" src={Headshot} alt="headshot" />
           </Col>
           <Col sm={1} md={8} lg={8}>
