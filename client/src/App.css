@@ -8,6 +8,11 @@ body {
     font-size: 15px;
   }
 
+  .jumbotron{
+    position: relative;
+    top: 60px;
+  }
+
   .skill-list {
     display: none;
   }
@@ -23,9 +28,14 @@ body {
     display: none;
   }
 
-  #headshot-img {
-    height: 159px;
-    width: 169px;
+  #headshot {
+    max-height: 159px;
+    max-width: 169px;
+  }
+
+  .headshot-container{
+    display: flex;
+    justify-content: center;
   }
 
   #intro-text {
